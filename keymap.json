@@ -16,7 +16,9 @@
       "alt-cmd-left": "pane::ActivatePrevItem",
       "alt-cmd-right": "pane::ActivateNextItem",
       "ctrl-t": "terminal_panel::ToggleFocus",
-      "ctrl-shift-t": "workspace::NewTerminal"
+      "ctrl-shift-t": "workspace::NewTerminal",
+      // unbind so i dont accidentally hit this (toggles line numbers)
+      "cmd-;": null
     }
   }
 ]
