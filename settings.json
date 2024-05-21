@@ -12,6 +12,9 @@
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "relative_line_numbers": true,
+  "autosave": "on_focus_change",
+  "format_on_save": "off",
+  "soft_wrap": "editor_width",
   "language_overrides": {
     "Python": {
       "format_on_save": {
@@ -20,6 +23,19 @@
           "arguments": ["format", "--stdin-filename", "{buffer_path}"]
         }
       }
+    },
+    "TypeScript": {
+      "enable_language_server": false
+    },
+    "JavaScript": {
+      "enable_language_server": false
+    }
+  },
+  "assistant": {
+    "version": "1",
+    "provider": {
+      "name": "openai",
+      "default_model": "gpt-4"
     }
   }
 }
