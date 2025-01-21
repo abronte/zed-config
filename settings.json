@@ -13,13 +13,16 @@
   "buffer_font_size": 16,
   "relative_line_numbers": true,
   "autosave": "on_focus_change",
-  "format_on_save": "off",
+  "show_inline_completions": true,
   "soft_wrap": "editor_width",
+  "vim": {
+    "use_system_clipboard": "on_yank"
+  },
   "language_overrides": {
     "Python": {
       "format_on_save": {
         "external": {
-          "command": "ruff",
+          "command": "uvx ruff",
           "arguments": ["format", "--stdin-filename", "{buffer_path}"]
         }
       }
@@ -32,10 +35,11 @@
     }
   },
   "assistant": {
-    "version": "1",
-    "provider": {
-      "name": "openai",
-      "default_model": "gpt-4"
-    }
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3-5-sonnet"
+    },
+    "version": "2"
   }
 }
+
