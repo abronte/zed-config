@@ -18,11 +18,19 @@
   "vim": {
     "use_system_clipboard": "on_yank"
   },
-  "language_overrides": {
+  "languages": {
     "Python": {
+      // "enable_language_server": false,
+      // "language_servers": [
+      //   "!pylsp",
+      //   "pyright",
+      //   "!mypy",
+      //   "!pycodestyle",
+      //   "pyflakes"
+      // ],
       "format_on_save": {
         "external": {
-          "command": "uvx ruff",
+          "command": "ruff",
           "arguments": ["format", "--stdin-filename", "{buffer_path}"]
         }
       }
@@ -42,4 +50,3 @@
     "version": "2"
   }
 }
-
