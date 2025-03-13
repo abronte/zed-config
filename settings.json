@@ -7,20 +7,24 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "theme": "One Dark",
   "vim_mode": true,
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": 16.0,
   "relative_line_numbers": true,
   "autosave": "on_focus_change",
-  "show_inline_completions": true,
+  "show_edit_predictions": true,
   "soft_wrap": "editor_width",
   "vim": {
     "use_system_clipboard": "on_yank"
   },
   "languages": {
     "Python": {
-      // "enable_language_server": false,
+      // "enable_language_server": true,
+      "language_servers": ["pyright", "pyflakes"],
       // "language_servers": [
       //   "!pylsp",
       //   "pyright",
@@ -44,9 +48,12 @@
   },
   "assistant": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-3-5-sonnet"
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
+  },
+  "auto_install_extensions": {
+    "html": false
   }
 }
